@@ -1,0 +1,14 @@
+<mat-toolbar >
+    <mat-toolbar-row>
+        <button class="btn"  (click)='toggleSideBar(); isClicked = !isClicked' [class.buttonChange]="isClicked" [autofocus] = "false">
+            <mat-icon [class.menuChange]='isClicked'>menu</mat-icon>
+        </button>
+        
+
+        <div style="margin-left: 50%;">
+            <h3>Inventory Management</h3>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+

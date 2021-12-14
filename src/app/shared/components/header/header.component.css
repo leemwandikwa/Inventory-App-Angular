@@ -1,0 +1,30 @@
+.mat-icon{
+    color: #253ABA;
+    /*  padding: 0.5rem; */
+}
+.buttonChange{
+    color:white;
+    background-color: #ba253a;
+    border: none;
+    border-radius: 50%;
+    
+}
+.menuChange{
+    color: white;
+}
+.mat-icon-button {
+    border: none;
+}
+
+button {
+
+    outline: none !important;
+}
+button:hover{
+    cursor: pointer;
+}
+.mat-icon-button ::ng-deep {
+    
+     outline: none !important;
+     
+}

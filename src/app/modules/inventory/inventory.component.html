@@ -1,0 +1,25 @@
+<div>
+    <table style=" margin-left:15%" class=" bordered raised">
+        <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>State</th>
+            <th>Category</th>
+            <th>Date Of Purchase</th>
+            <th> Item Image</th>
+            <th> Item tags</th>
+        </thead>
+        <tbody *ngFor = 'let item of records'>
+            <tr (click) = 'openDetails(item)'>
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.state}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.date | date}}</td>
+                <td>{{item.image}}</td>
+                <td>{{item.tag}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

@@ -1,0 +1,85 @@
+<form class="border border-light" #f='ngForm' (ngSubmit)="onSubmit(f)" novalidate >
+    <div class="modal-header">
+        
+        <h4 class="modal-title w-100 " style="margin-left: 40%;">ADD NEW ITEM</h4>
+
+           
+    </div>
+    <!--Body section-->
+    <div class="modal-body">
+        <div>
+            <input class="form-control" type="text" name="name" id="comment" placeholder="Item name" size="60" ngModel>
+        </div>
+        <div>
+            <input class="form-control" type="text" name="description" placeholder="Item description" id="comment" size="60" ngModel>
+        </div>
+        <div>
+            <p>Select item state</p>
+            <input class="form-control" type="radio" name="state" id="new" value="new" ngModel>
+            <label for="new">New</label><br>
+
+            <input class="form-control" type="radio" name="state"  id="refurbish" value="refurbish" ngModel>
+            <label for="refurbish">Refurbish</label><br>
+        </div>
+        
+
+        <div>
+            <p>Select item Category</p>
+            <mat-form-field appearance="fill">
+              <mat-label>Category</mat-label>
+              <select matNativeControl required name="selected" ngModel>
+                <option value="monitors">Monitor</option>
+                <option value="cpu">CPU</option>
+                <option value="ups">UPS</option>
+                <option value="laptop">Laptop</option>
+                <option value="keyboard">Keyboard</option>
+                <option value="mouse">Mouse</option>
+              </select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <input class="form-control" type="date" name="date"  id="date" ngModel>
+        </div>
+
+        <div>
+            <form >
+                <input type="file" id="myFile" name="filename" ngModel>
+                <input type="submit">
+              </form>
+        </div>
+
+        <div>
+            <!-- <section class="tag-section">
+                <span class="tag-list-section">
+                  <mat-checkbox class="tag-margin"
+                                [checked]="allTags"
+                                [color]="task.color"
+                                [indeterminate]="someComplete()"
+                                (change)="setAll($event.checked)">
+                    {{tag.name}}
+                  </mat-checkbox>
+                </span>
+                <span class="example-list-section">
+                  <ul>
+                    <li *ngFor="let item of tag.tags">
+                      <mat-checkbox [(ngModel)]=""
+                                    [color]="subtask.color"
+                                    (ngModelChange)="updateAllComplete()">
+                        {{subtask.name}}
+                      </mat-checkbox>
+                    </li>
+                  </ul>
+                </span>
+              </section> -->
+        </div>
+    </div>
+
+
+    <!-- Footer section -->
+    <div class="modal-footer ">
+        <a><button type="submit" style="background-color: green; color: white; float:right" [disabled]="f.invalid" (click)="closeModal()"> Update </button></a>
+    </div>
+
+</form>
+

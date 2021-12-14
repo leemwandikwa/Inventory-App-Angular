@@ -1,0 +1,42 @@
+<div>
+    <div class="modal-header">
+        
+        <h4 class="modal-title w-100 ">ITEM DETAILS</h4>
+
+         
+    </div>
+    <div>
+        <a><button style="float:right;"><mat-icon>print</mat-icon></button></a>
+    </div>
+    <!--Body section-->
+    <div class="modal-body">
+        <div>
+            <span><strong>Name: </strong></span> - {{itemdetails.name}}
+        </div>
+        <div>
+            <span><strong>Description: </strong></span> - {{itemdetails.description}}
+        </div>
+        <div>
+            <span><strong>State: </strong></span> - {{itemdetails.state}}
+        </div>
+        <div>
+            <span><strong>Category: </strong></span> - {{itemdetails.category}}
+        </div>
+        <div>
+            <span><strong>Date of Purchase: </strong></span> - {{itemdetails.date}}
+        </div>
+        <div>
+            <span><strong>Image: </strong></span> - {{itemdetails.image}}
+        </div>
+        <div>
+            <span><strong>Tags: </strong></span> - {{itemdetails.tag}}
+        </div>
+    </div>
+
+
+    <!-- Footer section -->
+    <div class="modal-footer " style="margin-top: 2rem;">
+        <a ><button type="button" (click)="closeModal()" style="background-color:#800000;color:#ffe8ff"> Close </button></a>
+    </div>
+
+</div>

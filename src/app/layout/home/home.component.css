@@ -1,0 +1,21 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+mat-drawer{
+    width: 250px;
+    background-color:#2f4f4f ;
+    
+}
+
+mat-drawer-container{
+    height: 100%;
+}
+mat-drawer-content{
+    padding:20px;
+}
+body{
+    /* font-family: 'Quicksand', sans-serif; */
+    background-color: #ffffff ;
+}

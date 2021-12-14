@@ -1,0 +1,30 @@
+body {
+    font-family: 'Rosario', sans-serif !important; 
+
+}
+img {
+    margin-bottom: 2.5rem;
+}
+
+.mat-icon{
+    text-align: center;
+    
+}
+.mat-list-item{
+    padding: 0.5rem;
+    color: #F8F8FF !important;
+    /* font-family: 'Itim', cursive !important; */
+}
+.mat-list-item span{
+    margin-left: 1rem;
+}
+h4 {
+    padding: 0.5rem;
+    color: #F8F8FF !important;
+    /* font-family: 'Itim', cursive !important; */
+}
+#page {
+    color:#ba253a !important;
+    background-color: #F8F8FF;
+    border-radius: 60%;
+}
