@@ -10,7 +10,7 @@ export class InventoryService {
 
   private addUrl = 'https://60742d38066e7e0017e793ca.mockapi.io/api/v1/add-item';
   private itemsUrl = 'https://60742d38066e7e0017e793ca.mockapi.io/api/v1/add-item';
-  private detailsUrl = 'https://60742d38066e7e0017e793ca.mockapi.io/api/v1/add-item';
+  private detailsUrl = 'https://60742d38066e7e0017e793ca.mockapi.io/api/v1/add-item?id=';
 
   constructor( private http:HttpClient) { }
 
@@ -21,4 +21,9 @@ export class InventoryService {
   public AddItem (payloadData:any){
     return this.http.post<any>(this.addUrl, payloadData);
   }
+  public GetItemsDetails(id: any){
+    return this.http.get<any>(this.itemsUrl + id)
+  }
+
 }
+

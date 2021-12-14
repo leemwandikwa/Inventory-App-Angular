@@ -13,6 +13,15 @@ export class InventoryComponent implements OnInit {
   constructor(private apiService:InventoryService, public detailsDialog:MatDialog) { }
 
   records:any;
+  name:any;
+  category:any;
+  img:any;
+  tag:any;
+  state:any;
+  description:any;
+  date:any;
+  inventoryItems:any={};
+
   ngOnInit(): void {
     this.loadItems();
   }
@@ -30,10 +39,24 @@ export class InventoryComponent implements OnInit {
   loadItems(){
 
     this.apiService.GetItemsList()
-      .subscribe((res)=>{
+      .subscribe((res: any)=>{
         
         console.log(res);
         this.records = res;
+        for(let i=0; i<this.records.length; i++){
+
+          this.name= this.records[i]['item-name'];
+          this.category= this.records[i]['item-category']
+          this.description= this.records[i]['item-description']
+          this.date= this.records[i]['item-date']
+          this.state= this.records[i]['item-state']
+          this.img= this.records[i]['item-img']
+          this.tag= this.records[i]['item-tag']
+          //records
+        }
+
+       
+
         
       })
 

@@ -7,11 +7,13 @@ import { InventoryService } from 'src/app/shared/services/inventory.service';
 @Component({
   selector: 'app-add-item',
   templateUrl: './add-item.component.html',
-  styleUrls: ['./add-item.component.css']
+  styleUrls: ['./add-item.component.css'],
 })
 export class AddItemComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<AddItemComponent>, @Inject(MAT_DIALOG_DATA) public data:any, private apiService:InventoryService) { }
+  constructor(
+    public dialogRef: MatDialogRef<AddItemComponent>, @Inject(MAT_DIALOG_DATA) 
+    public data:any, private apiService:InventoryService) { }
 
   ngOnInit(): void {
   }
@@ -34,7 +36,7 @@ export class AddItemComponent implements OnInit {
     }
 
     this.apiService.AddItem(payload).subscribe(
-      (res)=>{
+      (res: any)=>{
         console.log(res);
       }
     )
