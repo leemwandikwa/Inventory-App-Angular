@@ -6,30 +6,30 @@
          
     </div>
     <div>
-        <a><button style="float:right;"><mat-icon>print</mat-icon></button></a>
+        <a><button (click)="generatePDF()" style="float:right;"><mat-icon>print</mat-icon></button></a>
     </div>
     <!--Body section-->
     <div class="modal-body">
         <div>
-            <span><strong>Name: </strong></span> - {{itemdetails.name}}
+            <span><strong>Name: </strong></span> - {{name}}
         </div>
         <div>
-            <span><strong>Description: </strong></span> - {{itemdetails.description}}
+            <span><strong>Description: </strong></span> - {{description}}
         </div>
         <div>
-            <span><strong>State: </strong></span> - {{itemdetails.state}}
+            <span><strong>State: </strong></span> - {{state}}
         </div>
         <div>
-            <span><strong>Category: </strong></span> - {{itemdetails.category}}
+            <span><strong>Category: </strong></span> - {{category}}
         </div>
         <div>
-            <span><strong>Date of Purchase: </strong></span> - {{itemdetails.date}}
+            <span><strong>Date of Purchase: </strong></span> - {{date}}
         </div>
         <div>
-            <span><strong>Image: </strong></span> - {{itemdetails.img}}
+            <span><strong>Image: </strong></span> - {{img}}
         </div>
         <div>
-            <span><strong>Tags: </strong></span> - {{itemdetails.tag}}
+            <span><strong>Tags: </strong></span> - <span *ngFor="let thetag of tag"> {{thetag}}</span>
         </div>
     </div>
 

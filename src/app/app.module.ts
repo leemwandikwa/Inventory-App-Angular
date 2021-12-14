@@ -21,6 +21,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { DetailsComponent } from './modules/details/details.component';
 import { AddItemComponent } from './modules/add-item/add-item.component';
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { ItemPdfComponent } from './modules/item-pdf/item-pdf.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
     HeaderComponent,
     SidebarComponent,
     DetailsComponent,
-    AddItemComponent
+    AddItemComponent,
+    ItemPdfComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,15 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule, ReactiveFormsModule,
     AppRoutingModule,
-    MatMenuModule, MatIconModule, MatListModule, MatToolbarModule, MatDialogModule, MatDividerModule, MatSidenavModule, MatFormFieldModule, MatInputModule
+    MatMenuModule, 
+    MatIconModule, 
+    MatListModule, 
+    MatToolbarModule, 
+    MatDialogModule, 
+    MatDividerModule, 
+    MatSidenavModule, 
+    MatFormFieldModule, 
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
